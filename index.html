@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Manager</h1>
+        
+        <div class="password-generator">
+            <input type="text" id="passwordName" placeholder="Enter password name">
+            <button id="generateBtn">+ Generate Password</button>
+            <input type="text" id="generatedPassword" readonly>
+            <button id="copyBtn">Copy</button>
+            <button id="saveBtn">Save Password</button>
+        </div>
+
+        <div class="password-list">
+            <h2>Saved Passwords</h2>
+            <button id="importBtn">Import Passwords</button>
+            <ul id="passwordsList"></ul>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

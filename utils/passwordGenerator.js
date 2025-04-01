@@ -1,4 +1,3 @@
-// utils/passwordGenerator.js
 
 function generatePassword(length = 16) {
   const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=';

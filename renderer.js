@@ -1,4 +1,3 @@
-// renderer.js
 document.addEventListener('DOMContentLoaded', () => {
   // Password tab elements
   const generateBtn = document.getElementById('generateBtn');

@@ -1,10 +1,11 @@
-# Electron Password Manager
+# Password Manager
 
 ## Features
 - Generate secure random passwords
 - Save passwords with custom names
 - Copy passwords to clipboard
 - Import/Export passwords via JSON
+- Hide generated JSON passwords file into an image
 - Simple and intuitive interface
 
 ## Prerequisites
@@ -37,6 +38,3 @@ npm start
 npm run dist  # Creates distributable for your platform
 ```
 
-## Security Notes
-- Store the `passwords.json` file securely
-- Consider adding encryption for stored passwords in future versions

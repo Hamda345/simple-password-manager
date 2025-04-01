@@ -10,10 +10,19 @@
 ## Prerequisites
 - Node.js (v14 or later)
 - npm
-
+- steghide
 ## Installation
-1. Clone the repository
-2. Install dependencies:
+1.Install steghide
+```bash
+#Debian based distros
+sudo apt install steghide
+#Arch based distros
+sudo pacman -Sy steghide
+#Fedora
+sudo dnf install steghide
+```
+2. Clone the repository
+3. Install dependencies:
 ```bash
 npm install
 ```

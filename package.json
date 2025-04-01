@@ -11,7 +11,7 @@
     "dist:linux": "electron-builder --linux"
   },
   "build": {
-    "appId": "com.yourcompany.passwordmanager",
+    "appId": "Password Manager",
     "productName": "Password Manager",
     "directories": {
       "output": "dist"
@@ -31,7 +31,7 @@
       "icon": "build/icon.png"
     }
   },
-  "author": "Your Name <your.email@example.com>",
+  "author": "Hamda Dallel hdallel13@gamil.com",
   "license": "ISC",
   "devDependencies": {
     "electron": "^29.1.5",

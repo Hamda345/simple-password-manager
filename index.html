@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,18 +8,63 @@
     <div class="container">
         <h1>Password Manager</h1>
         
-        <div class="password-generator">
-            <input type="text" id="passwordName" placeholder="Enter password name">
-            <button id="generateBtn">+ Generate Password</button>
-            <input type="text" id="generatedPassword" readonly>
-            <button id="copyBtn">Copy</button>
-            <button id="saveBtn">Save Password</button>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="passwords">Passwords</button>
+            <button class="tab-btn" data-tab="steganography">Steganography</button>
         </div>
+        
+        <div id="passwords-tab" class="tab-content active">
+            <div class="password-generator">
+                <input type="text" id="passwordName" placeholder="Enter password name">
+                <button id="generateBtn">+ Generate Password</button>
+                <input type="text" id="generatedPassword" readonly>
+                <button id="copyBtn">Copy</button>
+                <button id="saveBtn">Save Password</button>
+            </div>
 
-        <div class="password-list">
-            <h2>Saved Passwords</h2>
-            <button id="importBtn">Import Passwords</button>
-            <ul id="passwordsList"></ul>
+            <div class="password-list">
+                <h2>Saved Passwords</h2>
+                <button id="importBtn">Import Passwords</button>
+                <ul id="passwordsList"></ul>
+            </div>
+        </div>
+        
+        <div id="steganography-tab" class="tab-content">
+            <div id="steghide-check" class="stego-section">
+                <h2>Steganography Tool Status</h2>
+                <div id="steghide-status">Checking if steghide is installed...</div>
+                <div id="steghide-instructions" class="hidden"></div>
+            </div>
+            
+            <div id="hide-passwords-section" class="stego-section hidden">
+                <h2>Hide Passwords in Image</h2>
+                <p>This will hide your passwords.json file inside an image file using steganography.</p>
+                <div class="stego-controls">
+                    <button id="selectImageBtn">Select Cover Image</button>
+                    <span id="selectedImagePath">No image selected</span>
+                </div>
+                <div class="stego-controls">
+                    <label for="stegoPassword">Password to protect hidden data:</label>
+                    <input type="password" id="stegoPassword" placeholder="Enter password for steganography">
+                </div>
+                <button id="hidePasswordsBtn" disabled>Hide Passwords in Image</button>
+                <div id="hideStatus" class="status-message"></div>
+            </div>
+            
+            <div id="extract-passwords-section" class="stego-section hidden">
+                <h2>Extract Passwords from Image</h2>
+                <p>This will extract your passwords.json file from a steganographic image.</p>
+                <div class="stego-controls">
+                    <button id="selectStegoImageBtn">Select Stego Image</button>
+                    <span id="selectedStegoImagePath">No image selected</span>
+                </div>
+                <div class="stego-controls">
+                    <label for="extractPassword">Password to extract hidden data:</label>
+                    <input type="password" id="extractPassword" placeholder="Enter extraction password">
+                </div>
+                <button id="extractPasswordsBtn" disabled>Extract Passwords from Image</button>
+                <div id="extractStatus" class="status-message"></div>
+            </div>
         </div>
     </div>
 

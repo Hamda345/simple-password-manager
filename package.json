@@ -1,14 +1,43 @@
 {
   "name": "password-manager",
   "version": "1.0.0",
+  "description": "Secure Password Manager",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux"
   },
   "build": {
     "appId": "com.yourcompany.passwordmanager",
-    "productName": "Password Manager"
+    "productName": "Password Manager",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "build/icon.png"
+    }
+  },
+  "author": "Your Name <your.email@example.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.5",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
   }
 }
